@@ -1,6 +1,6 @@
 # Fire Risk Modeling
 
-A machine learning model that scores how likely each building is to have a structure fire, built from municipal property, inspection and fire incident records from 2010 to 2025. The goal is to help a city decide where limited inspection hours do the most good.
+Built as part of a research project with Southern Methodist University (SMU). A machine learning model that scores how likely each building is to have a structure fire, built from municipal property, inspection and fire incident records from 2010 to 2025. The goal is to help a city decide where limited inspection hours do the most good.
 
 The scoring and validation code is here. The underlying records are not, because they are city data. Every chart below is drawn from aggregate results only, with no addresses, coordinates or place names.
 
