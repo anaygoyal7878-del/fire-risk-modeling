@@ -118,11 +118,25 @@ An ordinary least squares fit on structure fires per year from 2010 to 2025 give
 - With 102 positives, tier level results are noisy. I report counts next to percentages so the sample size is visible.
 - Time based splits matter. Random splits would leak future fire history into training and inflate the score.
 
+## Run it yourself
+
+The real records are private, so there is a demo on fully synthetic data that runs the same idea end to end: fake buildings and fire years, history features built from earlier years only, training on the past, testing on the future, and a comparison with a size baseline.
+
+```
+pip install -r requirements.txt
+python demo/risk_demo.py
+pytest
+```
+
+The tests check that history features never use fires from the future, that the model beats random and the size baseline on the synthetic data, and that the top slice metric behaves correctly. A GitHub Actions workflow runs them on every push.
+
 ## Files
 
 - `model/prep.py` builds the building table and fire history from the raw exports
 - `model/train.py` builds features, runs baselines, tunes and compares gradient boosting with logistic regression, and computes permutation importance
 - `model/final.py` trains the evaluated model, refits on all labeled years, scores the next two years and generates reasons for each score
+- `demo/risk_demo.py` runs the pipeline on synthetic data
+- `tests/` holds the tests
 - `docs/images/` holds the charts above
 
 ## Stack
