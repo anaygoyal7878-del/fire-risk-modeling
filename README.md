@@ -27,6 +27,8 @@ The weights were fitted on 3,187 corporate buildings. Of those, 291 (9.1%) had a
 | Tier II chemical listing | 0.8% | Listed buildings add points |
 | Fire protection permits | 0.4% | Almost no effect |
 
+![How much each factor counts, and how often top scoring buildings had a fire](docs/images/scorecard.png)
+
 ## How well it works
 
 Each building was scored by a model that had not seen it. Among the 5% of buildings with the highest scores, 51% had a fire, compared with 9% for a randomly chosen building. That is about 5.6 times as often.
