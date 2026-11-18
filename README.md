@@ -49,9 +49,3 @@ Most of the signal comes from size, value and building type. Using only those th
 - Larger and more valuable buildings have more fires on record partly because they have more space and more people.
 - Trash cases and remodel permits have small negative weights. That is not evidence that they reduce risk.
 - The factors were chosen using the same fires the model is tested on, so the results are somewhat optimistic.
-
-## Also in this repository
-
-A more complex version of the model and a demo that runs on synthetic data are included in `model/` and `demo/`.
-
-Stack: Python, pandas, scikit learn
